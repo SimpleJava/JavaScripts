@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Revision {
+    
+public static void main(String[] args)
+
+    {
+        System.out.println("Enter what multiplication table do you want to generate?");
+        Scanner in = new Scanner(System.in); //Scanner 'in' to read next input 
+        int i = in.nextInt(); //Initialize variable 'i' which is given value (int) from scanner
+        
+        System.out.println("X " + i + " Multplication Table");
+        
+            for(int j = 1; j<11; j++)
+            { //Initialize variable 'j', increment 'j' when it's value is below 11 [run loop 10 times]
+                              
+            System.out.print(i + " X " + j + " = ");
+            System.out.println(i * j);
+            }
+    }
+}
+
