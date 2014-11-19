@@ -1,0 +1,24 @@
+public class Revision {
+    
+public static void main(String[] args)
+    {
+
+        int n; //Number of n (powers of 2)
+        int m = 1; //next power of 2  
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("How many powers of 2 would you like printed?");
+        n = scan.nextInt(); //Delcare value 
+
+        System.out.println("Here are the first " + n + " power of 2");
+
+
+        for (int i = 0; i < n; ++i) //Initalize i, when i is less than n increment i [i= current value]
+        {
+            DecimalFormat df = new DecimalFormat("###,###.###"); //formating 
+            System.out.println(df.format(m));
+            m=m*2;
+        }
+    }
+}
+
