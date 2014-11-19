@@ -1,0 +1,52 @@
+import java.util.Scanner;
+import static java.lang.Math.*; 
+
+public class Revision {
+    
+public static void main(String[] args)
+    {   
+        int a; //First Coefficient / a
+        int b; //Second Coefficient / b
+        int b2; //Temp variable for holding new value of b
+        int c; // Third Coefficient / c
+        
+        int t; //value holder
+        int t2; //value holder
+        int t3; //value holder
+        
+        int x; // X Co-oridinate values
+        int x2;
+        int y; // Y Co-ordinate value 
+        
+        System.out.println("Solving (-b +/- √b² - 4ac) / 2a ");
+        System.out.println("Enter First coefficient / a value:");
+        Scanner scan = new Scanner(System.in);
+        a = scan.nextInt(); //delcare value of a
+        
+        System.out.println("Enter Second coefficient / b value:");
+        b = scan.nextInt(); //delcare value  of b
+        
+        System.out.println("Enter Constant: / c value ");
+        c = scan.nextInt(); //delcare value of c
+        
+        b2 = b * b; // b squared value holder
+        
+        t = a * c; //value of a * c holder
+        t2 = t * 4; // holder of 4ac value 
+        t3 = b2 - t2; // sum of b² - 4ac
+        double rt = sqrt(t3); //root of sum
+        
+        System.out.println("Co-ordinate Values are as follows:");
+        
+        x = (int) ((-b - rt) / (2 * a));
+        System.out.println("Value of first x coefficient: " + x);
+        
+        x2 = (int) ((-b + rt) / (2 * a));
+        System.out.println("Value of second x coefficient: " + x2);
+        
+        y = (a * 0) + (b * 0) + c;
+        System.out.println("Value where y crosses the x axis: " + y);
+    }  
+}
+
+
