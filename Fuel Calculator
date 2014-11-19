@@ -1,0 +1,31 @@
+import java.util.Scanner;
+import static java.lang.Math.*; 
+
+public class Revision {
+    
+public static void main(String[] args)
+    {   
+        double i; //gallons in tank
+        double mpg; //mile per gallon
+        double ppg; //price per gallon
+      
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter gallons in tank : ");
+        i = scan.nextDouble(); //double variable
+        
+        System.out.print("Enter miles per gallon : ");
+        mpg = scan.nextDouble();
+        
+        System.out.print("Enter price per gallon : ");
+        ppg = scan.nextDouble();
+        
+        System.out.println("The car can travel " +  (i * mpg) + " miles"); //distance
+
+        double round = (100 / mpg) * ppg; //rounding double to 2 dp
+        round = Math.round(round * 100);  
+        
+        System.out.println("The cost per 100 miles is " + (round / 100)); // cost    
+    }  
+}
+
+
